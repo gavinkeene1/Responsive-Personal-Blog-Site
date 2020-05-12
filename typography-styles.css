@@ -1,0 +1,47 @@
+/* CSS Style Formatting - This lays out the properties of typography selectors
+including Headers, Paragraphs, Links, and Quotes. */
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.8 em;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.4em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+h6 {
+  font-size: 1em
+}
+
+p {
+
+}
+
+a:link {
+  text-decoration: none;
+  color: blue;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
