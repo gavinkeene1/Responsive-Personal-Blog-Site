@@ -9,26 +9,27 @@
         grid-template-areas:
         "header"
         "header"
+        "blog-one"
+        "blog-one"
+        "blog-one"
+        "blog-two"
+        "blog-two"
+        "blog-two"
+        "blog-three"
+        "blog-three"
+        "blog-three"
+        "blog-four"
+        "blog-four"
+        "blog-four"
+        "blog-five"
+        "blog-five"
+        "blog-five"
+        "blog-six"
+        "blog-six"
+        "blog-six"
         "sidebar"
-        "blog-one"
-        "blog-one"
-        "blog-one"
-        "blog-two"
-        "blog-two"
-        "blog-two"
-        "blog-three"
-        "blog-three"
-        "blog-three"
-        "blog-four"
-        "blog-four"
-        "blog-four"
-        "blog-five"
-        "blog-five"
-        "blog-five"
-        "blog-six"
-        "blog-six"
-        "blog-six"
         "footer";
+        font-size: 24px;
 /* Diagnostic border color below will indicate new design at breakpoint */
         border: 2px solid green;
     }
@@ -46,14 +47,15 @@
         grid-gap: 35px;
         grid-template-areas:
         "header header"
+        "blog-one blog-two"
+        "blog-one blog-two"
+        "blog-three blog-four"
+        "blog-three blog-four"
+        "blog-five blog-six"
+        "blog-five blog-six"
         "sidebar sidebar"
-        "blog-one blog-two"
-        "blog-one blog-two"
-        "blog-three blog-four"
-        "blog-three blog-four"
-        "blog-five blog-six"
-        "blog-five blog-six"
         "footer footer";
+        font-size: 24px;
 /* Diagnostic border color below will indicate new design at breakpoint */
         border: 2px solid red;
     }
@@ -73,9 +75,10 @@
       ". header header header header header header"
       "sidebar blog-one blog-one blog-two blog-two blog-three blog-three"
       "sidebar blog-one blog-one blog-two blog-two blog-three blog-three"
-      "sidebar blog-four blog-four blog-five blog-five blog-six blog-six"
+      ". blog-four blog-four blog-five blog-five blog-six blog-six"
       ". blog-four blog-four blog-five blog-five blog-six blog-six"
       "footer footer footer footer footer footer footer";
+      font-size: 18px;
 /* Diagnostic border color below will indicate new design at breakpoint */
           border: 2px solid blue;
       }
@@ -87,21 +90,34 @@
   border-radius: 5px;
   box-shadow: 1px 1px 3px 1px #e0dede;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.header{
+.header {
   grid-area:header;
+  padding: 0px;
 }
 
 
-.footer{
+.footer {
   grid-area: footer;
 }
 
 
-.sidebar{
+.sidebar {
   grid-area: sidebar;
+  display: grid;
+}
+
+/* Inserting this collapsed row between two flex items will make
+ * the flex item that comes after it break to a new row */
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 
