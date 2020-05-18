@@ -38,10 +38,34 @@ p {
   text-indent: 2em;
 }
 
+p.bold {
+  font-weight: bold;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.underline {
+  text-decoration: underline;
+}
+
 a:link {
   font-size: 1.2em;
   text-decoration: none;
   color: blue;
+}
+
+a:visited {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: green;
+}
+
+a:hover {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #181716;
 }
 
 ul li {
