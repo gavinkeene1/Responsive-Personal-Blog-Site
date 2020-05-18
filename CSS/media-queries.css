@@ -97,11 +97,8 @@ media links. */
             grid-gap: 12px;
             grid-template-areas:
             "header"
-            "post-content"
-            "post-content"
-            "post-content"
             "post-photo"
-            "post-photo"
+            "post-content"
             "sidebar"
             "footer";
             font-size: 24px;
@@ -121,11 +118,11 @@ media links. */
             grid-template-rows: repeat(200px, 7);
             grid-gap: 35px;
             grid-template-areas:
-            "header header"
-            "post-content post-photo"
-            "post-content post-photo"
-            "sidebar sidebar"
-            "footer footer";
+            "header"
+            "post-photo"
+            "post-content"
+            "sidebar"
+            "footer";
             font-size: 24px;
     /* Diagnostic border color below will indicate new design at breakpoint */
             border: 2px solid red;
@@ -137,16 +134,17 @@ media links. */
         .blog-grid {
           display: grid;
           width: 94vw;
-          height: 60vw;
-          grid-template-columns: 1fr 0.5fr 1fr 1fr;
-          grid-template-rows: 1fr 2fr 1fr 0.25fr;
+          height: min-content;
+          grid-template-columns: auto;
+          grid-auto-rows: auto;
           grid-gap: 2%;
           padding: 2%;
           grid-template-areas:
-          ". header header header"
-          "sidebar post-content post-content post-photo"
-          "sidebar post-content post-content post-photo"
-          "footer footer footer footer";
+          "header"
+          "post-photo"
+          "sidebar"
+          "post-content"
+          "footer";
           font-size: 18px;
     /* Diagnostic border color below will indicate new design at breakpoint */
               border: 2px solid blue;
@@ -182,6 +180,18 @@ media links. */
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.text-box {
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px #e0dede;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
 }
 
 .header {
