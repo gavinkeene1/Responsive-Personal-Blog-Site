@@ -65,6 +65,8 @@ media links. */
               border: 2px solid blue;
           }
         }
+
+
     @media screen and (min-width: 1400px) {
          .blog-grid {
            display: grid;
