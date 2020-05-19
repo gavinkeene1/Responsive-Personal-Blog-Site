@@ -41,7 +41,7 @@
   .home-grid {
         display: grid;
         width: 100vw;
-        height: 200vw;
+        height: 250vw;
         grid-template-columns: auto auto;
         grid-template-rows: repeat(200px, 7);
         grid-gap: 35px;
@@ -62,7 +62,7 @@
   }
 
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1000px) and (max-width: 1400px) {
     .home-grid {
       display: grid;
       width: 94vw;
@@ -84,6 +84,30 @@
       }
     }
 
+
+    @media screen and (min-width: 1400px) {
+      .home-grid {
+        display: grid;
+        width: 94vw;
+        height: 45vw;
+        grid-template-columns: repeat(12%, 7);
+        grid-template-rows: repeat(0.5fr, 6);
+        grid-gap: 2%;
+        padding: 2%;
+        grid-template-areas:
+        ". header header header header header header"
+        "sidebar blog-one blog-one blog-two blog-two blog-three blog-three"
+        "sidebar blog-one blog-one blog-two blog-two blog-three blog-three"
+        ". blog-four blog-four blog-five blog-five blog-six blog-six"
+        ". blog-four blog-four blog-five blog-five blog-six blog-six"
+        "footer footer footer footer footer footer footer";
+        font-size: 18px;
+     /* Diagnostic border color below will indicate new design at breakpoint */
+               border: 2px solid orange;
+           }
+         }
+
+
 .box {
   border: 1px solid #d3d3d3;
   border-radius: 5px;
@@ -95,9 +119,11 @@
   align-items: center;
 }
 
+
 div .hover-item:hover {
   background-color: #ececec;
 }
+
 
 .text-box {
   border: 1px solid #d3d3d3;
@@ -110,6 +136,7 @@ div .hover-item:hover {
   align-items: center;
   padding: 1%;
 }
+
 
 .header {
   grid-area:header;
@@ -127,12 +154,14 @@ div .hover-item:hover {
   display: grid;
 }
 
+
 /* Inserting this collapsed row between two flex items will make
  * the flex item that comes after it break to a new row */
 .break {
   flex-basis: 100%;
   height: 0;
 }
+
 
 #blog-one {
   grid-area: blog-one;
@@ -163,9 +192,11 @@ div .hover-item:hover {
   grid-area: blog-six;
 }
 
+
 #post-content {
   grid-area: post-content;
 }
+
 
 #post-photo {
   grid-area: post-photo;
