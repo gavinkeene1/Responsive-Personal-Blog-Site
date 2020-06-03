@@ -1,4 +1,7 @@
 @media screen and (max-width: 600px) {
+      body {
+        font-size: 24px;
+      }
       .home-grid {
         display: grid;
         width: 100vw;
@@ -38,7 +41,11 @@
 
   /* If Screen Is Wide Enough */
 @media screen and (min-width: 600px) and (max-width: 1000px) {
-  .home-grid {
+      body {
+        font-size: 24px;
+      }
+
+      .home-grid {
         display: grid;
         width: 100vw;
         height: 250vw;
@@ -63,7 +70,11 @@
 
 
   @media screen and (min-width: 1000px) and (max-width: 1400px) {
-    .home-grid {
+      body {
+        font-size: 18px;
+      }
+
+      .home-grid {
       display: grid;
       width: 94vw;
       height: 65vw;
@@ -86,6 +97,10 @@
 
 
     @media screen and (min-width: 1400px) {
+      body {
+        font-size: 18px;
+      }
+
       .home-grid {
         display: grid;
         width: 94vw;
@@ -103,7 +118,7 @@
         "footer footer footer footer footer footer footer";
         font-size: 18px;
      /* Diagnostic border color below will indicate new design at breakpoint */
-               border: 2px solid orange;
+        border: 2px solid orange;
            }
          }
 
@@ -135,6 +150,17 @@ div .hover-item:hover {
   justify-content: center;
   align-items: center;
   padding: 1%;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s
+}
+
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -200,4 +226,9 @@ div .hover-item:hover {
 
 #post-photo {
   grid-area: post-photo;
+}
+
+footer {
+  text-align: center;
+  font-size: 1em;
 }
