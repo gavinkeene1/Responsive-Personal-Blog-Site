@@ -73,6 +73,10 @@ ul li {
   font-size: 1.4em;
 }
 
+blockquote {
+  font-style: italic;
+}
+
 
 q {
   quotes: "“" "”" "‘" "’";
